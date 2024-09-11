@@ -1,0 +1,15 @@
+
+{%extends "index.html"%}
+{% block content %}
+<h2><strong>Novinari</strong></h2>
+<ol class="tekst">
+    {% for author in author_list %}
+        <p class="autor"> {{ author.name}} {{author.surname}} </p>
+        <p class="autor">Kontakt: {{author.phone_number}} </p>
+        <p class="autor"> {{ author.email }}</p>
+        <a href="{% url 'update-author' author.id %}"><button class="button">Ažuriraj novinara</button></a>
+
+        <hr>
+    {% endfor %}
+</ol>
+{% endblock %}

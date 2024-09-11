@@ -1,0 +1,113 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  color: #0082B8;
+  text-align: center;
+  font-family: "Times new roman";
+  font-size: 80px;
+}
+h2 {
+  color: #0082B8;
+  text-align: center;
+  font-family: "Times new roman";
+  font-size: 50px;
+}
+h3 {
+  color: #0082B8;
+  text-align: left;
+  font-family: "Times new roman";
+  font-size: 40px;
+}
+h4 {
+  text-align: left;
+  font-family: "verdana";
+  font-size: 20px;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  color: white;
+}
+p.uvod {
+  font-family: verdana;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+p.autor {
+  font-family: verdana;
+  font-size: 18px;
+}
+p.navbar {
+  font-family: verdana;
+  font-size: 40px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #15324c;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+  border-right: 1px solid white;
+}
+
+li a {
+  display: block;
+  color: #0082B8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Verdana";
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+hr {
+  border-top: 10px solid #0082B8;
+}
+
+ol.tekst{
+  list-style-type: none;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: white;
+  text-align: center;
+}
+
+form{
+  margin: 0 auto;
+  width: 250px;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #3399CC;
+}
+.button1 {background-color: #3399CC;} /* RED */
+.button2 {background-color: #1154e6;} /* Blue */

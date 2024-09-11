@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+<title>UNIRI portal</title><br><br><br><br><br>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body style = "background-color: #112236;">
+    <div style="padding-top:20px;margin-top:0px;">
+    <h1>Uniri portal</h1>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/"><img src="{% static 'image.jpg' %} "></a></li>
+            <li><a href="/"><p class="navbar">Naslovna</p></p></a></li>
+            <li><a href="/news"><p class="navbar">Vijesti</p></a></li>
+            <li><a href="/authors"><p class="navbar">Novinari</p></a></li>
+            <li><a href="/dodaj_clanak"><p class="navbar">Dodaj članak</p></a></li>
+
+            {% if user.is_authenticated %}
+            <li><a href="/korisnici/logout_user"><p class="navbar">Logout</p></a></li>
+            <li style="float:right; border-left: 1px solid white"><p class="navbar"><a><font color="white">Dobrodošli: {{user.username}}</font></a></p></li> 
+            {% else %}
+            <li><a href="/korisnici/login_user"><p class="navbar">Login</p></a></li>
+            <li style="float:right; border-left: 1px solid white"><a  href="/korisnici/register_user"> <p class="navbar">Registracija</p> </a></li>    
+            {% endif %}
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                
+                    <font color="white"><strong>{{ message }}</strong></font>
+
+                  </div>
+            {% endfor %} 
+        {% endif %}
+    </div>
+
+    <div class="content">
+        {% block content %}
+        <p class="uvod">Dobrodošli na novinski portal Sveučilišta u Rijeci, UNIRI portal.
+    </br>Ovdje možete naići na radnom članke godine, te pristupiti podatcima autora istih.</p><br><br>
+    <p style="text-align:center;"><img src="{% static 'fidit.jpg' %} " width="50%" height="auto" align="center"></p><br><br><br><br>
+    {% endblock %}
+    </div>
+</div>
+
+<div class="footer">
+    Izrada: Antonio Kovačev
+    </div>
+</body>
+</html>

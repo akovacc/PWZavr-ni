@@ -1,0 +1,20 @@
+
+{%extends "index.html"%}
+
+{% block content %}
+    <h2><strong>Vijesti</strong></h2><br><br><br><br>
+    <ol class="tekst">
+        {% for news in news_list %}
+            <h3>       {{ news.title }}</h3>
+            <p>        {{news.content}}</p><br>
+            <h4><p class="autor">Članak napisao: {{ news.author }}</p>
+            <p>Kategorija članka: {{news.category_name}}</p>
+            <p>Datum objave: {{news.publication_date}}</p><br><br></h4>
+            <a href="{% url 'delete-news' news.title %}"><button class="button"> Izbriši članak</button></a>
+            
+            <hr><br><br><br>
+        {% endfor %}
+    </ol>
+{% endblock %}
+
+

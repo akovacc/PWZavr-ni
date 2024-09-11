@@ -1,0 +1,42 @@
+
+{%extends "index.html"%}
+
+{% block content %}
+    <h2><strong>Dodaj članak</strong></h2><br><br><hr><br><br><br><br>
+    
+
+<body>
+    <form action="" method="POST">
+    {% csrf_token %}
+
+<div align="center">
+    <font size=6 color = "white">Naslov članka:</font></h3><br><br> <input type="text" name="title"/><br><br>
+
+
+    <font size=6 color = "white">Članak: <br>
+    <textarea cols="100" rows="20" name="content">
+    </textarea><br/>
+    <br>
+
+    Autor:<input type="text" name="name"/><br><br>
+
+
+    <font size=6 color = "white">Datum objave: <br>
+        <input type="date" name="publication_date"/><br><br>
+
+
+    <input type="submit" value="Post"/>
+
+
+    </form>
+
+
+
+
+</div>
+    <br><br><br>   <br><br><br>   <br><br><br>   <br><br><br>
+</div>
+
+
+    </body>
+{% endblock %}
