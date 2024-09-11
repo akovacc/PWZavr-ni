@@ -1,0 +1,28 @@
+{% extends "main/index.html" %}
+
+{% block content %} 
+
+{% if form.errors %}
+<p>There was an error with your form.</p>
+{% endif %}
+<h2>Registracija</h2>
+      
+
+
+</br>
+
+	<form action="{% url 'register_user' %}" method=POST>
+		{% csrf_token %}
+
+		<div align="justify">
+		{{form.as_p}}
+		</div>
+		
+
+	<div align = "justify">
+	<input type ="submit" value="Potvrdi" class = "btn btn-secondary"  align = "center">
+	</div>
+	<br/><br/><br/><br/><br/>
+</form>
+
+{% endblock %}

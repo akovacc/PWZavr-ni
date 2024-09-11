@@ -1,0 +1,33 @@
+{% extends "main/index.html" %}
+
+{% block content %} 
+<h2>Login</h2>
+      
+
+
+</br>
+
+	<form action="" method=POST>
+		{% csrf_token %}
+
+			<div class="mb-3" align = "center">
+			  <label for="exampleInputEmail1" class="form-label"><font color="white">ID korisnika</label><br>
+			  <input type="text" class="form-control" name="username" aria-describedby="emailHelp"><br><br>
+			</div>
+			<div class="mb-3"  align = "center">
+			  <label for="exampleInputPassword1" class="form-label">Lozinka</label><br>
+			  <input type="password" class="form-control" name="password">
+			</div><br>
+
+		  
+
+
+
+
+
+	<div align = "center">
+	<input type ="submit" value="Unesi" class = "btn btn-secondary"  align = "center">
+	</div>
+</form>
+
+{% endblock %}
